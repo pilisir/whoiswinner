@@ -1,0 +1,110 @@
+.btn-round-lg{
+    border-radius: 22.5px;
+}
+.btn-round{
+    border-radius: 17px;
+}
+.btn-round-sm{
+    border-radius: 15px;
+}
+.btn-round-xs{
+    border-radius: 11px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.wiw-td-size-sm {
+    width: 120px;
+    min-width: 120px;
+    max-width: 120px;
+}
+
+.wiw-td-size {
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.wiw-td-size-lg {
+    width: 400px;
+    min-width: 400px;
+    max-width: 400px;
+}
+
+.wiw-cursor-pointer {
+    cursor: pointer;
+}
+
+#wiw-main-table td:first-child {
+    vertical-align: middle;
+}
+
+#wiw-main-table {
+    margin-bottom: 0;
+}
+
+#wiw-main-table th {
+    vertical-align: top;
+}
+
+#wiw-main-table th, #wiw-main-table td {
+    word-break: break-word;
+}
+
+#wiw-main-table th div[contenteditable=true], 
+#wiw-main-table td div[contenteditable=true],
+.wiw-note[contenteditable=true] {
+    padding: 3px;
+}
+
+#wiw-main-table th div[contenteditable=true].active, 
+#wiw-main-table td div[contenteditable=true].active,
+.wiw-note[contenteditable=true].active,
+#wiw-main-layout div[role=alert][contenteditable=true].active {
+    background-color: white;
+    z-index: 99999;
+    position: relative;
+    border-radius: 5px;
+}
+
+.wiw-note {
+    font-size: 0.5em;
+}
+
+.table-responsive.primary .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #cce5ff59;
+}
+.table-responsive.success .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #d4edda59;
+}
+.table-responsive.info .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #d1ecf159;
+}
+.table-responsive.warning .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #fff3cd59;
+}
+.table-responsive.danger .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8d7da59;
+}
+
+.table-responsive.primary .table-striped tbody tr:hover {
+    background-color: #cce5ff80;
+}
+.table-responsive.success .table-striped tbody tr:hover {
+    background-color: #d4edda80;
+}
+.table-responsive.info .table-striped tbody tr:hover {
+    background-color: #d1ecf180;
+}
+.table-responsive.warning .table-striped tbody tr:hover {
+    background-color: #fff3cd80;
+}
+.table-responsive.danger .table-striped tbody tr:hover {
+    background-color: #f8d7da80;
+}
+
+.imgur-copy-text {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
