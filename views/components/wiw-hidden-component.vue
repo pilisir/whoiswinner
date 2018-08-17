@@ -310,25 +310,25 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
                 let params = new FormData();
                 params.append('image', base64ImageArray[1]);
 
-                // fetch("https://api.imgur.com/3/image",
-                //     {
-                //         headers : {
-                //             Authorization: "Client-ID f90db03be2020a2"
-                //         },
-                //         method: 'POST',
-                //         body: params
-                //     }
-                // ).then(function(response) {
-                //     return response.json();
-                // }).then(function(jsonResponse) {
+                fetch("https://api.imgur.com/3/image",
+                    {
+                        headers : {
+                            Authorization: "Client-ID f90db03be2020a2"
+                        },
+                        method: 'POST',
+                        body: params
+                    }
+                ).then(function(response) {
+                    return response.json();
+                }).then(function(jsonResponse) {
                     hiddenVue.$refs.hiddenComponent.$refs.previewResultModal.hide();
-                    // let link = jsonResponse.data.link;
-                    let link = 'https://i.imgur.com/BVzArat.png';
+                    let link = jsonResponse.data.link;
+                    // let link = 'https://i.imgur.com/BVzArat.png';
 
                     hiddenVue.$refs.hiddenComponent.imgurLink = link;
                     hiddenVue.$refs.hiddenComponent.$refs.imgurResultModal.show();
                     hiddenVue.modal = false;
-                // });
+                });
             },
             updatePropsModal: function(val) {
                 this.$emit('update:modal', val);

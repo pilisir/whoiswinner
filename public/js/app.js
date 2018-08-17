@@ -315,7 +315,7 @@ function initApp() {
 
     i18n.locale = locael;
     document.title = i18n.t('nav.title');
-    // window.onbeforeunload = wiwConfirmExit;
+    window.onbeforeunload = wiwConfirmExit;
     
 }
 
