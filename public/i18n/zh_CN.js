@@ -5,10 +5,11 @@ const zhCN = {
             preview: '预览',
             imageBG: '背景图片',
             imageWin: '胜利图片',
-            tableWidth: '表格栏宽'
+            tableWidth: '表格栏宽',
+            about: '关于'
         }
     },
-    title : {
+    title: {
         placeholder: '点我输入标题'
     },
     table: {
@@ -24,8 +25,7 @@ const zhCN = {
             default: {
                 new: '项目'
             }
-        },
-        note: '备注'
+        }
     },
     button: {
         competition: {
@@ -35,13 +35,13 @@ const zhCN = {
             add: '新增比较'
         },
         base: {
-            ok: '确认',
+                ok: '确认',
             cancel: '取消',
             close: '关闭'
         },
         preview: {
-            publish: '發布至 Imgur',
-            download: '下載'
+                publish: '發布至 Imgur',
+                download: '下載'
         },
         imgur: {
             copy: '拷贝链接'
@@ -84,6 +84,12 @@ const zhCN = {
             win: {
                 label: '获胜项目'
             }
+        },
+        about: {
+            title: '关于',
+            author: '作者',
+            lib: '第三方套件',
+            image: '图片'
         }
     },
     theme: {

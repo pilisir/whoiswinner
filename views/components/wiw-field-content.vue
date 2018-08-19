@@ -9,6 +9,8 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
 </template>
 
 <script>
+    let wiwTableResponsive = document.querySelector('#wiw-main-layout .table-responsive');
+
     module.exports = {
         props: [
             'data',
@@ -32,6 +34,7 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
                 }
                 this.editing = false;
                 hiddenVue.modal = false;
+                wiwTableResponsive.classList.remove("active");
             },
             updateFieldText: function(event, content){
                 this.data[this.index].label = content;
@@ -45,6 +48,7 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
             contentFocus: function () {
                 hiddenVue.modal = true;
                 this.editing = true;
+                wiwTableResponsive.classList.add("active");
             }
         }
     }

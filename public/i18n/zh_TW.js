@@ -5,7 +5,8 @@ const zhTW = {
             preview: '預覽',
             imageBG: '背景圖片',
             imageWin: '勝利圖片',
-            tableWidth: '表格欄寬'
+            tableWidth: '表格欄寬',
+            about: '關於'
         }
     },
     title : {
@@ -24,8 +25,7 @@ const zhTW = {
             default: {
                 new: '項目'
             }
-        },
-        note: '備註'
+        }
     },
     button: {
         competition: {
@@ -84,6 +84,12 @@ const zhTW = {
             win: {
                 label: '獲勝項目'
             }
+        },
+        about: {
+            title: '關於',
+            author: '作者',
+            lib: '第三方套件',
+            image: '圖片'
         }
     },
     theme: {

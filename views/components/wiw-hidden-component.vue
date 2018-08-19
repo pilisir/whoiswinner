@@ -138,6 +138,53 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
                 </b-col>
             </b-row>
         </b-modal>
+        <b-modal id="wiw-about-modal" ref="aboutModal" style="text-overflow: ellipsis;overflow: hidden;" class="w-100" centered ok-only :ok-variant="themeVariant.outline">
+            <template slot="modal-title">
+                {{$t("modal.about.title")}}
+            </template>
+            <template slot="modal-ok">
+                {{$t("button.base.close")}}
+            </template>
+            <div id="wiw-about-wrapper">
+                <span class="font-weight-bold">
+                    {{$t("modal.about.author")}}
+                </span>
+                <hr>
+                <b-row>
+                    <b-col cols="12">
+                        {{wiwAuthor.name}}
+                    </b-col>
+                    <b-col cols="12">
+                        <b-link :href="'mailto:' + wiwAuthor.email">{{wiwAuthor.email}}</b-link>
+                    </b-col>
+                    <b-col cols="12">
+                        <b-link :href="wiwAuthor.github" target="_blank">{{wiwAuthor.github}}</b-link>
+                    </b-col>
+                </b-row>
+                <br>
+                <span class="font-weight-bold">
+                    {{$t("modal.about.lib")}}
+                </span>
+                <hr>
+                <b-row>
+                    <b-col cols="12" v-for="lib in libList" :key="lib.label">
+                        <b-link :href="lib.url" target="_blank">{{lib.label}}</b-link>
+                    </b-col>
+                </b-row>
+                <br>
+                <span class="font-weight-bold">
+                    {{$t("modal.about.image")}}
+                </span>
+                <hr>
+                <b-row>
+                    <b-col cols="12" v-for="image in libImageList" :key="image.label">
+                        <b-img class="wiw-icon-preview" :src="image.local"></b-img>
+                        <span> <span>
+                        <b-link :href="image.url" target="_blank">{{image.license}}</b-link>
+                    </b-col>
+                </b-row>
+            </div>
+        </b-modal>
         <simplert id="wiw-simplert" :useRadius="true" :useIcon="true" ref="simplert"></simplert>
     </div>
 </template>
@@ -147,6 +194,53 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
     const iconUrlPattern = 'https://example.com/win.png';
     const uploadFileRegExp = new RegExp(/.(?:png)$/, 'i');
     let tableWidthSizeOption, winnerIconOption;
+    const libList = [
+        {
+            label: 'Vue.js',
+            url: 'https://vuejs.org/'
+        },
+        {
+            label: 'Bootstrap Vue',
+            url: 'https://bootstrap-vue.js.org/'
+        },
+        {
+            label: 'Vue i18n',
+            url: 'https://kazupon.github.io/vue-i18n/'
+        },
+        {
+            label: 'Vue-Awesome',
+            url: 'https://justineo.github.io/vue-awesome/demo/'
+        },
+        {
+            label: 'vue2-simplert',
+            url: 'https://vue2-simplert.gitbook.io/docs/'
+        },
+        {
+            label: 'html2canvas',
+            url: 'https://html2canvas.hertzen.com/'
+        },
+        {
+            label: 'FileSaver.js',
+            url: 'https://github.com/eligrey/FileSaver.js/'
+        },
+        {
+            label: 'Outdated Browser',
+            url: 'http://outdatedbrowser.com/'
+        }
+    ];
+
+    const libImageList =[
+        {
+            local: userImageDefaultSrc,
+            url: 'https://www.iconfinder.com/icons/2875606/crown_hat_king_layer_photo_royal_royalty_icon',
+            license: 'CC BY-SA 3.0'
+        },
+        {
+            local: winnerImageDefaultSrc,
+            url: 'https://www.iconfinder.com/icons/216498/user_icon',
+            license: 'CC BY-NC 3.0'
+        }
+    ];
 
     module.exports = {
         props: [
@@ -156,6 +250,9 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
         ],
         data() {
             return {
+                wiwAuthor: wiwAuthor,
+                libList: libList,
+                libImageList: libImageList,
                 tableWidthSizeOption: [],
                 competitorWidthSizeOptionSelect: 'wiw-td-size',
                 competitionWidthSizeOptionSelect: 'wiw-td-size',
@@ -181,7 +278,6 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
                 { text: i18n.t('modal.winnerIconConfig.options.upload'), value: 'upload' },
                 { text: i18n.t('modal.winnerIconConfig.options.url'), value: 'url' }
             ];
-
 
             this.tableWidthSizeOption = tableWidthSizeOption;
             this.winnerIconOption = winnerIconOption;

@@ -5,7 +5,8 @@ const enUS = {
             preview: 'Preview',
             imageBG: 'Background Image',
             imageWin: 'Winner Icon',
-            tableWidth: "Table's Width"
+            tableWidth: "Table's Width",
+            about: 'About'
         }
     },
     title : {
@@ -24,8 +25,7 @@ const enUS = {
             default: {
                 new: 'Competition'
             }
-        },
-        note: 'Note'
+        }
     },
     button: {
         competition: {
@@ -84,6 +84,12 @@ const enUS = {
             win: {
                 label: 'Win of Competition'
             }
+        },
+        about: {
+            title: 'About',
+            author: 'Author',
+            lib: 'Librarys',
+            image: 'Images'
         }
     },
     theme: {

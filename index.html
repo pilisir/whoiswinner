@@ -14,6 +14,8 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
         <link type="text/css" rel="stylesheet" href="views/lib/bootstrap-vue/bootstrap.min.css"/>
         <link type="text/css" rel="stylesheet" href="views/lib/bootstrap-vue/bootstrap-vue.min.css"/>
         <link type="text/css" rel="stylesheet" href="views/lib/simplert/simplert.common.min.css"/>
+        
+        <link type="text/css" rel="stylesheet" href="public/lib/outdatedbrowser/outdatedbrowser.min.css"/>
         <link type="text/css" rel="stylesheet" href="public/css/main.min.css"/>
         <link type="text/css" rel="stylesheet" href="public/css/preview.min.css"/>
 
@@ -28,14 +30,15 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
         <script src="public/lib/html2canvas/html2canvas.min.js"></script>
         <script src="public/lib/FileSaver/FileSaver.min.js"></script>
         <script src="public/lib/FileSaver/canvas-toBlob.min.js"></script>
+        <script src="public/lib/outdatedbrowser/outdatedbrowser.min.js"></script>
 
         <script src="public/i18n/zh_TW.min.js"></script>
         <script src="public/i18n/zh_CN.min.js"></script>
         <script src="public/i18n/en_US.min.js"></script>
         <script src="public/js/app.min.js"></script>
     </head>
-
     <body>
+        <div id="outdated"></div>
         <b-navbar id="wiw-main-navbar" fixed="top" toggleable="md" :type="themeVariant.navbarType" :variant="themeVariant.navbar">
             <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
             
@@ -43,12 +46,10 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
             <b-collapse is-nav id="nav_collapse">
                 <b-navbar-nav>
                     <b-nav-item href="#" @click="previewResultModal">{{$t("nav.button.preview")}}</b-nav-item>
-                    <!-- <b-nav-item href="#">{{zhTW.nav.button.imageBG}}</b-nav-item> -->
                     <b-nav-item href="#" @click="winnerIconModal">{{$t("nav.button.imageWin")}}</b-nav-item>
                     <b-nav-item href="#" @click="tableConfigModal" >{{$t("nav.button.tableWidth")}}</b-nav-item>
+                    <b-nav-item href="#" @click="aboutModal" >{{$t("nav.button.about")}}</b-nav-item>
                 </b-navbar-nav>
-            
-                <!-- Right aligned nav items -->
                 <b-navbar-nav class="ml-auto">          
                     <b-nav-item-dropdown right>
                         <template slot="button-content">
@@ -93,11 +94,12 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
                         </template>
                     </b-table>
                     <div class="w-100 wiw-note" contenteditable="true" :class="{'active': noteEditing}" @focus="noteFocus" @blur="noteBlur">
-                        Power by <b>pilisir.tw@gmail.com</b>
+                        Power by <span class="font-weight-bold">{{wiwAuthor.email}}</span>
                     </div>
                 </b-col>
             </b-row>
         </b-container>
+        <div style="padding-bottom:5em"></div>
         <footer class="fixed-bottom bg-light py-2">
             <b-container id="wiw-footer-navbar">
                 <b-row class="text-center" >

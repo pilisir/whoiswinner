@@ -16,6 +16,11 @@ const i18n = new VueI18n({
 
 const userImageDefaultSrc = 'public/image/user.png';
 const winnerImageDefaultSrc = 'public/image/crown.png';
+const wiwAuthor = {
+    name: 'Jason Jian',
+    email: 'pilisir.tw@gmail.com',
+    github: 'https://github.com/pilisir/whoiswinner'
+};
 
 let navbarVue;
 let mainLayoutVue;
@@ -170,6 +175,9 @@ function initComponent(){
             winnerIconModal: function() {
                 hiddenVue.$refs.hiddenComponent.$refs.winnerIconModal.show();
             },
+            aboutModal: function() {
+                hiddenVue.$refs.hiddenComponent.$refs.aboutModal.show();
+            },
             themeChange: function(index) {
                 themeVariant.navbar = themeObjectArray[index].variant.navbar;
                 themeVariant.navbarType = themeObjectArray[index].variant.navbarType;
@@ -212,6 +220,7 @@ function initComponent(){
         el: "#wiw-main-layout",
         i18n,
         data: {
+            wiwAuthor: wiwAuthor,
             themeVariant: themeVariant,
             fields: tableFields,
             items: tableItems,
@@ -294,6 +303,7 @@ function initComponent(){
         el: "#wiw-hidden-component",
         i18n,
         data: {
+            wiwAuthor: wiwAuthor,
             themeVariant: themeVariant,
             fields: mainLayoutVue.fields,
             modal: modalActive
@@ -306,19 +316,45 @@ function initComponent(){
 
 function initApp() {
     let locael = 'en_US';
+    let outDateBrowserLang = 'en';
     let language = navigator.language || navigator.userLanguage; 
     if ('zh-TW' === language) {
         locael = 'zh_TW';
+        outDateBrowserLang = 'zh-tw';
     } else if ('zh-CN' === language) {
         locael = 'zh_CN';
+        outDateBrowserLang = 'zh-cn';
     }
 
     i18n.locale = locael;
     document.title = i18n.t('nav.title');
-    window.onbeforeunload = wiwConfirmExit;
     
+    addLoadEvent(function(){
+        outdatedBrowser({
+            bgColor: '#2b9e8f',
+            color: '#ffffff',
+            lowerThan: 'Edge',
+            languagePath: `public/lib/outdatedbrowser/lang/${outDateBrowserLang}.html`
+        })
+    });
+
+    window.onbeforeunload = wiwConfirmExit;
 }
 
 function wiwConfirmExit() {
     return i18n.t('exit.confirm');
+}
+
+function addLoadEvent(func) {
+    var oldonload = window.onload;
+    if (typeof window.onload != 'function') {
+        window.onload = func;
+    } else {
+        window.onload = function() {
+            if (oldonload) {
+                oldonload();
+            }
+            func();
+        }
+    }
 }
