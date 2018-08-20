@@ -89,7 +89,8 @@ const zhTW = {
             title: '關於',
             author: '作者',
             lib: '第三方套件',
-            image: '圖片'
+            image: '圖片',
+            donate: '請我喝一杯飲料'
         }
     },
     theme: {

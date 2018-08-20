@@ -89,7 +89,8 @@ const enUS = {
             title: 'About',
             author: 'Author',
             lib: 'Librarys',
-            image: 'Images'
+            image: 'Images',
+            donate: 'Buy me a Coffee'
         }
     },
     theme: {

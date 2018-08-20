@@ -162,6 +162,15 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
                     </b-col>
                 </b-row>
                 <br>
+                <span>
+                    {{$t("modal.about.donate")}}
+                </span>
+                <b-row>
+                    <b-col cols="12" v-for="donate in donateList" :key="donate.label">
+                        <b-link :href="donate.url" target="_blank">{{donate.label}}</b-link>
+                    </b-col>
+                </b-row>
+                <br>
                 <span class="font-weight-bold">
                     {{$t("modal.about.lib")}}
                 </span>
@@ -242,6 +251,17 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
         }
     ];
 
+    const donateList = [
+        {
+            label: 'PayPal',
+            url: 'https://www.paypal.me/pilisir/0.99usd'
+        },
+        {
+            label: 'OPal',
+            url: 'https://p.opay.tw/unUun'
+        }
+    ];
+
     module.exports = {
         props: [
             'fields',
@@ -253,6 +273,7 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
                 wiwAuthor: wiwAuthor,
                 libList: libList,
                 libImageList: libImageList,
+                donateList: donateList,
                 tableWidthSizeOption: [],
                 competitorWidthSizeOptionSelect: 'wiw-td-size',
                 competitionWidthSizeOptionSelect: 'wiw-td-size',

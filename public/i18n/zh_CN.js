@@ -89,7 +89,8 @@ const zhCN = {
             title: '关于',
             author: '作者',
             lib: '第三方套件',
-            image: '图片'
+            image: '图片',
+            donate: '请我喝一杯饮料'
         }
     },
     theme: {
