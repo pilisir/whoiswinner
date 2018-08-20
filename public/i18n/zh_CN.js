@@ -1,10 +1,10 @@
 const zhCN = {
     nav: {
-        title: '胜利图产生器',
+        title: '或成最大赢家生成器',
         button: {
             preview: '预览',
             imageBG: '背景图片',
-            imageWin: '胜利图片',
+            imageWin: '赢家图片',
             tableWidth: '表格栏宽',
             about: '关于'
         }
@@ -16,9 +16,9 @@ const zhCN = {
         field:{
             default: {
                 none: '',
-                main: '事主',
-                opponent: '对手',
-                challenger: '挑战者'
+                main: '或成最大赢家',
+                opponent: '恐成最大赢家',
+                challenger: '传成最大赢家'
             }
         },
         row:{
@@ -78,11 +78,11 @@ const zhCN = {
                 upload: '上传'
             },
             winner: {
-                label: '胜利者'
+                label: '赢家'
                 
             },
             win: {
-                label: '获胜项目'
+                label: '赢得项目'
             }
         },
         about: {

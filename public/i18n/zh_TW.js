@@ -1,10 +1,10 @@
 const zhTW = {
     nav: {
-        title: '勝利圖產生器',
+        title: '或成最大贏家產生器',
         button: {
             preview: '預覽',
             imageBG: '背景圖片',
-            imageWin: '勝利圖片',
+            imageWin: '贏家圖片',
             tableWidth: '表格欄寬',
             about: '關於'
         }
@@ -16,9 +16,9 @@ const zhTW = {
         field:{
             default: {
                 none: '',
-                main: '事主',
-                opponent: '對手',
-                challenger: '挑戰者'
+                main: '或成最大贏家',
+                opponent: '恐成最大贏家',
+                challenger: '傳成最大贏家'
             }
         },
         row:{
@@ -78,11 +78,11 @@ const zhTW = {
                 upload: '上傳'
             },
             winner: {
-                label: '勝利者'
+                label: '贏家'
                 
             },
             win: {
-                label: '獲勝項目'
+                label: '贏得項目'
             }
         },
         about: {
