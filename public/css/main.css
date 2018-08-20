@@ -1,19 +1,13 @@
-body {
-    position: relative;
-    height: auto;
-    min-height: 100% !important;
-}
-
-.btn-round-lg{
+.btn-round-lg { 
     border-radius: 22.5px;
 }
-.btn-round{
+.btn-round {
     border-radius: 17px;
 }
-.btn-round-sm{
+.btn-round-sm {
     border-radius: 15px;
 }
-.btn-round-xs{
+.btn-round-xs {
     border-radius: 11px;
     padding-left: 10px;
     padding-right: 10px;

@@ -467,7 +467,7 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
     }
 
     #wiw-opacity-layer {
-        position:absolute;
+        position: fixed;
         top:0;
         left:0;
         right:0;
