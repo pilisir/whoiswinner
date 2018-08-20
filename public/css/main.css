@@ -1,3 +1,9 @@
+body {
+    position: relative;
+    height: auto;
+    min-height: 100% !important;
+}
+
 .btn-round-lg{
     border-radius: 22.5px;
 }
@@ -52,13 +58,14 @@
 }
 
 #wiw-main-table th, #wiw-main-table td {
-    word-break: break-word;
+    word-wrap: break-word;
 }
 
 #wiw-main-table th div[contenteditable=true], 
 #wiw-main-table td div[contenteditable=true],
 .wiw-note[contenteditable=true] {
     padding: 3px;
+    min-height: 30px;
 }
 
 #wiw-main-table th div[contenteditable=true].active, 
@@ -72,39 +79,39 @@
 }
 
 .wiw-note {
-    font-size: 0.5em;
+    font-size: 12px;
 }
 
 .table-responsive.primary .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #cce5ff59;
+    background-color: rgba(204, 229, 255, 0.34901960784313724);
 }
 .table-responsive.success .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #d4edda59;
+    background-color: rgba(212, 237, 218, 0.34901960784313724)
 }
 .table-responsive.info .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #d1ecf159;
+    background-color: rgba(209, 236, 241, 0.34901960784313724);
 }
 .table-responsive.warning .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #fff3cd59;
+    background-color: rgba(255, 243, 205, 0.34901960784313724);
 }
 .table-responsive.danger .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #f8d7da59;
+    background-color: rgba(248, 215, 218, 0.34901960784313724);
 }
 
 .table-responsive.primary .table-striped tbody tr:hover {
-    background-color: #cce5ff80;
+    background-color: rgba(204, 229, 255, 0.5019607843137255);
 }
 .table-responsive.success .table-striped tbody tr:hover {
-    background-color: #d4edda80;
+    background-color: rgba(212, 237, 218, 0.5019607843137255);
 }
 .table-responsive.info .table-striped tbody tr:hover {
-    background-color: #d1ecf180;
+    background-color: rgba(209, 236, 241, 0.5019607843137255);
 }
 .table-responsive.warning .table-striped tbody tr:hover {
-    background-color: #fff3cd80;
+    background-color: rgba(255, 243, 205, 0.5019607843137255);
 }
 .table-responsive.danger .table-striped tbody tr:hover {
-    background-color: #f8d7da80;
+    background-color: rgba(248, 215, 218, 0.5019607843137255);
 }
 
 .imgur-copy-text {

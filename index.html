@@ -18,6 +18,8 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
         <link type="text/css" rel="stylesheet" href="public/lib/outdatedbrowser/outdatedbrowser.min.css"/>
         <link type="text/css" rel="stylesheet" href="public/css/main.min.css"/>
         <link type="text/css" rel="stylesheet" href="public/css/preview.min.css"/>
+        
+        <script src="public/js/validate-browser.min.js"></script>
 
         <script src="views/lib/vue/vue.min.js"></script>
         <script src="public/lib/babel/polyfill.min.js"></script>
@@ -36,12 +38,12 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
         <script src="public/i18n/zh_CN.min.js"></script>
         <script src="public/i18n/en_US.min.js"></script>
         <script src="public/js/app.min.js"></script>
+
     </head>
     <body>
         <div id="outdated"></div>
         <b-navbar id="wiw-main-navbar" fixed="top" toggleable="md" :type="themeVariant.navbarType" :variant="themeVariant.navbar">
             <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-            
             <b-navbar-brand href="#">{{$t("nav.title")}}</b-navbar-brand>
             <b-collapse is-nav id="nav_collapse">
                 <b-navbar-nav>
@@ -72,7 +74,7 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
         <b-container id="wiw-main-layout" :class="{preview:preview}">
             <b-row class="text-center">
                 <b-col md="12">
-                    <b-alert show contenteditable="true" :variant="themeVariant.normal" class="mb-0" :class="{'active': alertEditing}" @focus.native="titleFocus" @blur.native="titleBlur">{{$t("title.placeholder")}}</b-alert>
+                    <b-alert show contenteditable="true" :variant="themeVariant.normal" :class="{'active': alertEditing, 'mb-0': true}" @focus.native="titleFocus" @blur.native="titleBlur">{{$t("title.placeholder")}}</b-alert>
                 </b-col>
             </b-row>
             <b-row>

@@ -316,45 +316,19 @@ function initComponent(){
 
 function initApp() {
     let locael = 'en_US';
-    let outDateBrowserLang = 'en';
     let language = navigator.language || navigator.userLanguage; 
     if ('zh-TW' === language) {
         locael = 'zh_TW';
-        outDateBrowserLang = 'zh-tw';
     } else if ('zh-CN' === language) {
         locael = 'zh_CN';
-        outDateBrowserLang = 'zh-cn';
     }
 
     i18n.locale = locael;
     document.title = i18n.t('nav.title');
-    
-    addLoadEvent(function(){
-        outdatedBrowser({
-            bgColor: '#2b9e8f',
-            color: '#ffffff',
-            lowerThan: 'Edge',
-            languagePath: `public/lib/outdatedbrowser/lang/${outDateBrowserLang}.html`
-        })
-    });
 
     window.onbeforeunload = wiwConfirmExit;
 }
 
 function wiwConfirmExit() {
     return i18n.t('exit.confirm');
-}
-
-function addLoadEvent(func) {
-    var oldonload = window.onload;
-    if (typeof window.onload != 'function') {
-        window.onload = func;
-    } else {
-        window.onload = function() {
-            if (oldonload) {
-                oldonload();
-            }
-            func();
-        }
-    }
 }

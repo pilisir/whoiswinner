@@ -26,7 +26,7 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
         },
         methods: {
             updateText: function(event) {
-                let content = event.srcElement.innerHTML;
+                let content = (event.srcElement || event.target).innerHTML;
                 if (this.type == 'field') {
                     this.updateFieldText(event, content);
                 } else {
