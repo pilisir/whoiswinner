@@ -7,5 +7,5 @@ twitter:
   username: 或成最大贏家產生器 Who Is Winner
   card: summary
 plugins:
-  - jekyll-seo-tagplugin
+  - jekyll-seo-tag
   - jekyll-sitemap
