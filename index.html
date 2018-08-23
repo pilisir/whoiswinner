@@ -9,24 +9,10 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
         <title>或成最大贏家產生器</title>
         <title lang="en">Who Is Winner</title>
 
-        <meta name="author" content="Jason Pilisir Jian">
+        {% seo %}
+
         <meta name="copyright" content="pilisir.tw@gmail.com">
         <meta name="keywords" content="或成最大贏家產生器, Who Is Winner, whoiswinner">
-        <meta name="description" content="或成最大贏家產生器，製作你自己的比較圖。Build your competition table via Who Is Winner free." />
-
-        <meta itemprop="name" content="Who Is Winner"> 
-        <meta itemprop="description" content="或成最大贏家產生器，製作你自己的比較圖。Build your competition table via Who Is Winner free."> 
-        <meta itemprop="image" content="https://github.com/pilisir/whoiswinner/raw/master/public/image/crown.png">
-
-        <meta name="twitter:title" content="Who Is Winner"> 
-        <meta name="twitter:description" content="或成最大贏家產生器，製作你自己的比較圖。Build your competition table via Who Is Winner free."> 
-        <meta name="twitter:creator" content="pilisir.tw@gmail.com">
-        <meta name="twitter:image:src" content="https://github.com/pilisir/whoiswinner/raw/master/public/image/crown.png">
-
-        <meta property="og:title" content="或成最大贏家產生器 Who Is Winner" />
-        <meta property="og:url" content="https://pilisir.github.io/whoiswinner/" />
-        <meta property="og:image" content="https://github.com/pilisir/whoiswinner/raw/master/public/image/crown.png" />
-        <meta property="og:description" content="或成最大贏家產生器，製作你自己的比較圖。Build your competition table via Who Is Winner free." />
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"> 
@@ -117,7 +103,7 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
                         </template>
                     </b-table>
                     <div class="w-100 wiw-note" contenteditable="true" :class="{'active': noteEditing}" @focus="noteFocus" @blur="noteBlur">
-                        Power by <span class="font-weight-bold">{{wiwAuthor.email}}</span>
+                        <span class="font-weight-bold">{{$t("nav.title")}}</span> Power by <span class="font-weight-bold">{{wiwAuthor.email}}</span>
                     </div>
                 </b-col>
             </b-row>

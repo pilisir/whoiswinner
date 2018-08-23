@@ -1,0 +1,11 @@
+title: 或成最大贏家產生器 Who Is Winner
+description: 或成最大贏家產生器，製作你自己的比較圖。Build your competition table via Who Is Winner free.
+url: https://pilisir.github.io/whoiswinner/
+author: pilisir.tw@gmail.com
+logo: /public/image/crown.png
+twitter:
+  username: 或成最大贏家產生器 Who Is Winner
+  card: summary
+plugins:
+  - jekyll-seo-tagplugin
+  - jekyll-sitemap
