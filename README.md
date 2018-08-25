@@ -8,6 +8,10 @@ https://pilisir.github.io/whoiswinner/
 * [中文](https://github.com/pilisir/whoiswinner/wiki/%E8%AA%AA%E6%98%8E)
 * [English](https://github.com/pilisir/whoiswinner/wiki/Document)
 
+## Demo
+![MotoGP](https://github.com/pilisir/whoiswinner/blob/master/document/example/motogp-whoiswinner.png)
+https://i.imgur.com/y91tNK2.png
+
 ## License
 MIT License
 
