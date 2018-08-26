@@ -9,6 +9,9 @@ https://pilisir.github.io/whoiswinner/
 * [English](https://github.com/pilisir/whoiswinner/wiki/Document)
 
 ## Demo
+![TW_Singer](https://github.com/pilisir/whoiswinner/blob/master/document/example/tw-singer-whoiswinner.png)
+https://i.imgur.com/CB7sYSv.png
+
 ![MotoGP](https://github.com/pilisir/whoiswinner/blob/master/document/example/motogp-whoiswinner.png)
 https://i.imgur.com/y91tNK2.png
 
