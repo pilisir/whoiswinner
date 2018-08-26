@@ -10,7 +10,7 @@ https://pilisir.github.io/whoiswinner/
 
 ## Demo
 ![TW_Singer](https://github.com/pilisir/whoiswinner/blob/master/document/example/tw-singer-whoiswinner.png)
-https://i.imgur.com/CB7sYSv.png
+https://i.imgur.com/eJAc7bS.png
 
 ![MotoGP](https://github.com/pilisir/whoiswinner/blob/master/document/example/motogp-whoiswinner.png)
 https://i.imgur.com/y91tNK2.png
