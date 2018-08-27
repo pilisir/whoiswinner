@@ -257,7 +257,7 @@ Under MIT Licesne, please go to "https://en.wikipedia.org/wiki/MIT_License" to c
             url: 'https://www.paypal.me/pilisir/0.99usd'
         },
         {
-            label: 'OPal',
+            label: 'OPay',
             url: 'https://p.opay.tw/unUun'
         }
     ];
